@@ -2,11 +2,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 
 export default function HomePage() {
   const [activeTab, setActiveTab] = useState("home");
-  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <main className="min-h-screen bg-white p-4 md:p-8 flex flex-col items-center">
@@ -40,12 +38,9 @@ export default function HomePage() {
               </Link>
 
               {/* Hover Dropdown for Careers */}
-              <div
-                className="relative"
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-              >
-                <button
+              <div className="relative">
+                <a
+                  href="#careers"
                   className={`px-6 py-2 rounded-full font-medium text-sm transition-all ${
                     activeTab === "careers"
                       ? "bg-black text-white"
@@ -54,32 +49,7 @@ export default function HomePage() {
                   onClick={() => setActiveTab("careers")}
                 >
                   Careers
-                </button>
-
-                <AnimatePresence>
-                  {isHovered && (
-                    <motion.div
-                      initial={{ opacity: 0, y: -10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -10 }}
-                      transition={{ duration: 0.2 }}
-                      className="absolute z-50 mt-2 w-30 bg-white shadow-lg ring-1 ring-black/5 focus:outline-none"
-                    >
-                      <Link
-                        href="/careers/studios"
-                        className="block px-4 py-2 text-[12px] text-gray-700 hover:bg-yellow-100"
-                      >
-                        Studios
-                      </Link>
-                      <Link
-                        href="/careers/educations"
-                        className="block px-4 py-2 text-[12px] text-gray-700 hover:bg-yellow-100"
-                      >
-                        Educations
-                      </Link>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+                </a>
               </div>
             </div>
 
@@ -462,7 +432,10 @@ export default function HomePage() {
       </section>
 
       {/* Careers section */}
-      <section className="px-6 md:px-16 py-16 bg-white w-full max-w-[1600px] text-center rounded-4xl ">
+      <section
+        id="careers"
+        className="px-6 md:px-16 py-16 bg-white w-full max-w-[1600px] text-center rounded-4xl "
+      >
         <h2 className="text-3xl md:text-5xl text-black font-medium font-primary tracking-wide  mb-2 ">
           Join Our Incredible Team
         </h2>
