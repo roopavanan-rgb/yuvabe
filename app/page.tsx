@@ -13,7 +13,7 @@ export default function HomePage() {
         className="
     relative w-full max-w-[1600px] h-[815px] md:h-[615px] mx-auto px-4 md:px-12 py-6 rounded-3xl 
     bg-[url('/images/mob-banner.svg')] 
-    sm:bg-[url('/images/hero-banner.svg')] 
+    sm:bg-[url('/images/hero-banner.webp')] 
     bg-cover bg-[position:center_top] sm:bg-right bg-no-repeat
   "
       >        {/* Top Row: Logo (left) & Buttons (right) */}
