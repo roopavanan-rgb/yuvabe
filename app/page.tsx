@@ -9,9 +9,15 @@ export default function HomePage() {
   return (
     <main className="min-h-screen bg-white p-4 md:p-8 flex flex-col items-center">
       {/* Hero Section */}
-      <section className="relative w-full max-w-[1600px] bg-[#f8f8f8] rounded-3xl pt-6 pb-10 px-4 sm:pt-8 sm:pb-14 sm:px-10 md:pt-6 md:pb-12 md:px-12 flex flex-col gap-10">
-        {/* Top Row: Logo (left) & Buttons (right) */}
-        <div className="flex items-center justify-between w-full">
+      <section
+        className="
+    relative w-full max-w-[1600px] h-[815px] md:h-[615px] mx-auto px-4 md:px-12 py-6 rounded-3xl 
+    bg-[url('/images/mob-banner.svg')] 
+    sm:bg-[url('/images/hero-banner.svg')] 
+    bg-cover bg-[position:center_top] sm:bg-right bg-no-repeat
+  "
+      >        {/* Top Row: Logo (left) & Buttons (right) */}
+        <div className="flex flex-row items-center justify-between w-full">
           <Image
             src="/images/logo.png"
             alt="Yuvabe logo"
@@ -27,11 +33,10 @@ export default function HomePage() {
               <Link
                 href="/"
                 onClick={() => setActiveTab("home")}
-                className={`px-6 py-2 rounded-full font-medium text-sm transition-all ${
-                  activeTab === "home"
-                    ? "bg-black text-amber-300"
-                    : "text-black"
-                }`}
+                className={`px-6 py-2 rounded-full font-medium text-sm transition-all ${activeTab === "home"
+                  ? "bg-black text-amber-300"
+                  : "text-black"
+                  }`}
               >
                 <span className="inline-block align-middle w-2 h-2 mr-1 rounded-full bg-yellow-400"></span>
                 Home
@@ -41,11 +46,10 @@ export default function HomePage() {
               <div className="relative">
                 <a
                   href="#careers"
-                  className={`px-6 py-2 rounded-full font-medium text-sm transition-all ${
-                    activeTab === "careers"
-                      ? "bg-black text-white"
-                      : "text-black"
-                  }`}
+                  className={`px-6 py-2 rounded-full font-medium text-sm transition-all ${activeTab === "careers"
+                    ? "bg-black text-white"
+                    : "text-black"
+                    }`}
                   onClick={() => setActiveTab("careers")}
                 >
                   Careers
@@ -63,31 +67,25 @@ export default function HomePage() {
         </div>
 
         {/* Bottom Row: Content (left) & Image (right) */}
-        <div className="flex flex-col md:flex-row justify-between w-full">
+        <div className="flex flex-col md:flex-row justify-start w-full h-full md:mt-[-40px] mt-0">
           {/* Left Content */}
-          <div className="w-full md:w-1/2 flex flex-col justify-center mb-10 md:mb-0">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-medium text-black mb-2 font-primary">
+          <div className="w-full md:w-1/2 flex flex-col justify-start mt-10 md:mt-0 md:justify-center h-full 
+                  text-center md:text-left 
+                  items-center md:items-start 
+                  md:pr-12">
+
+            <h1 className="text-3xl  md:text-[45px] font-medium text-black mb-4 font-primary">
               Two Paths, One Purpose
             </h1>
-            <p className="text-lg text-black leading-[30px] font-secondary font-regular">
+
+            <p className="text-lg text-black leading-[30px] font-secondary font-regular max-w-[520px]">
               Welcome to Yuvabe! Dive into a world where passion meets purpose,
               offering two unique paths:
               <strong> Yuvabe Education </strong> for hands-on learning and
               <strong> Yuvabe Studios </strong> for future-focused creativity.
-              Let’s build, learn, and create together.
+              Let&apos;s build, learn, and create together.
             </p>
-          </div>
 
-          {/* Right Image */}
-          <div className="w-full md:w-1/2 flex justify-end">
-            <Image
-              src="/images/hero.png"
-              alt="Person sitting with laptop"
-              width={500}
-              height={420}
-              className="object-cover mt-10 md:mt-0"
-              unoptimized
-            />
           </div>
         </div>
       </section>
@@ -130,10 +128,10 @@ export default function HomePage() {
           <div className="flex justify-center absolute lg:left-1/2 top-110 lg:top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 z-20">
             <Image
               src="/images/yb.png"
-              alt="Center Logo"
-              width={700}
-              height={700}
-              className="w-[600px] h-[250px] lg:w-[420px] lg:h-[350px]"
+              alt="stuidos Logo"
+              width={500}
+              height={500}
+              className="w-[600px] h-[250px] lg:w-[450px] lg:h-[350px]"
               unoptimized
             />
           </div>
@@ -211,7 +209,7 @@ export default function HomePage() {
               alt="Center Logo"
               width={700}
               height={700}
-              className="w-[410px] h-[380px]"
+              className="w-[382px] h-[390px]"
               unoptimized
             />
           </div>
