@@ -456,7 +456,7 @@ export default function HomePage() {
             Jobs at Yuvabe Education
           </a>
           <a
-            href="https://yuvabestudios.com/career/"
+            href="https://yuvabestudios.com/careers/"
             className="bg-[#5829C7]  transition text-sm text-white font-medium  font-primary uppercase py-3 px-6 rounded-full shadow-md"
           >
             Careers at Yuvabe Studios
