@@ -451,12 +451,16 @@ export default function HomePage() {
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
           <a
             href="https://www.yuvabeeducation.com/get-involved/join-us"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-[#FFCA2D]  text-sm transition font-primary text-black font-medium uppercase py-3 px-6 rounded-full shadow-md"
           >
             Jobs at Yuvabe Education
           </a>
           <a
             href="https://yuvabestudios.com/careers/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-[#5829C7]  transition text-sm text-white font-medium  font-primary uppercase py-3 px-6 rounded-full shadow-md"
           >
             Careers at Yuvabe Studios
